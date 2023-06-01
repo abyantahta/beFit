@@ -6,24 +6,20 @@ header{
     z-index: 99;
     background-color: transparent;
     backdrop-filter: blur(10px);
-    // background-color: red;
-    // display: flex;
     color: white;
     .headerContainer{
         display: flex;
         justify-content: space-between;
         padding: 0 4em;
         height: 100%;
-        // background-color: green;
         .left{
-            // background-color: blue;
             display: flex;
             align-items: center;
             gap: 10px;
             .img{
                 width: 30px;
                 height: 30px;
-                background-color: aqua;
+                background-color: rgb(176, 176, 176);
                 border-radius: 50%;
                 img{
                     width: 100%;
@@ -32,12 +28,10 @@ header{
             h2{
                 font-size: 1.4rem;
                 font-weight: 700;
-                // background-color: ;
             }
         }
 
         .right{
-            // background-color: yellow;
             display: flex;
             align-items: center;
             gap: 50px;
