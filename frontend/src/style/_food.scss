@@ -1,0 +1,120 @@
+#food{
+    background-color: $green;
+    width: 100%;
+    height: fit-content;
+    overflow: visible;
+    padding-top: 70px;
+    .heroImage{
+    background: url('../images//heroImage2.png');
+    height: 70vh;
+    opacity: .7;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.recipe{
+    width: 100%;
+    margin-top: 50px;
+    .filterFoods{
+        display: flex;
+        padding-right: 50px;
+        .inputArea{
+            background-color: white;
+            width: 350px;
+            margin-left: auto;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 37px;
+            display: flex;
+            align-items: center;
+            input{
+                padding-left: 30px;
+                height: 100%;
+                width: 85%;
+                outline: none;
+                border: 0px;
+                font-weight: 600;
+                &::placeholder{
+                    font-style: italic;
+                    font-size: 1rem;
+                }
+            }
+            i{
+                font-size: 1.4rem;
+            }
+
+        }
+    }
+    .subTitle{
+        margin-top: 70px;
+        text-align: center;
+        font-size: 1.7rem;
+        color: white;
+    }
+    .foodsContainer{
+        padding:  4em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+        .foodItem{
+            .imgArea{
+                position: relative;
+                img{
+                    border-radius: 15px;
+                    width: 100%;
+                    
+                }
+                .foodContentContainer{
+                    z-index: 99 ;
+                    background-color: white;
+                    position: absolute;
+                    border-radius: 15px;
+                    bottom: -50%;
+                    right: 50%;
+                    transform: translate(50%,-40%);
+                    width: 80%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .foodContent{
+                        padding: 15px;
+                        width: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        align-items: center;
+                    }
+                    .foodName{
+                        color: $green;
+                        font-size: 1.5rem;
+                    }
+                    .categories{
+                        font-size: 1rem;
+                    }
+                    .details{
+                        color: black;
+                        background-color: $brown;
+                        padding: 3px 30px;
+                        outline: none;
+                        border: 0px;
+                        border-radius: 20px;
+                        font-weight: 600;
+                        font-size: 1.1rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: lighten($brown, 5%);
+                        }
+                    }
+                }
+            }
+            width: 300px;
+            height: 300px;
+        }
+    }
+}
+}
