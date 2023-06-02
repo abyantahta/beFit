@@ -6,7 +6,7 @@ header{
     z-index: 99;
     background-color: transparent;
     backdrop-filter: blur(10px);
-    color: white;
+    color: black;
     .headerContainer{
         display: flex;
         justify-content: space-between;
@@ -41,7 +41,7 @@ header{
                 li{
                 display: inline-block;
                 .navItem{
-                    color: white;
+                    color: black;
                     text-decoration: none;
                     font-weight: 600;
                     font-size: 1.1rem;

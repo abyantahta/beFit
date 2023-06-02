@@ -31,11 +31,11 @@ function Login() {
         <div className="formContainer">
           <form action="">
             <div className="inputArea">
-              <input type="text" id='inputUsername'placeholder='Username' value={username} onClick={(e)=>setUsername(e.target.value)} />
+              <input type="text" id='inputUsername'placeholder='Username' onClick={(e)=>setUsername(e.target.value)} />
               <label hidden="hidden" htmlFor="inputUsername"></label>
             </div>
             <div className="inputArea">
-              <input type={passwordType} id='inputPassword' placeholder='Password' value={password} onClick={(e)=>setPassword(e.target.value)} />
+              <input type={passwordType} id='inputPassword' placeholder='Password' onClick={(e)=>setPassword(e.target.value)} />
               <label hidden="hidden" htmlFor="inputPassword"></label>
               <i onClick={toggleShowPassword}>
                 { 
