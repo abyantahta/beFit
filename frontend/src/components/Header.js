@@ -30,7 +30,7 @@ function Header() {
                         </li>
                     </ul>
                 </nav>
-                <Link className="headerToLogin">Login</Link>
+                <Link to='../login' className="headerToLogin">Login</Link>
             </div>
         </div>
     </header>
