@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import {RxHamburgerMenu} from 'react-icons/rx'
 function Header() {
-
+    const [drawer,setDrawer] = useState(false)
   return (
     <header>
         <div className="headerContainer">
@@ -12,7 +13,7 @@ function Header() {
                 <h2>BeFit</h2>
             </div>
             <div className="right">
-                <nav>
+                <nav className={(drawer? 'hide': '')}>
                     <ul>
                         <li>
                             <Link to='../' className='navItem'>Home</Link>
@@ -30,8 +31,9 @@ function Header() {
                             <Link className='navItem'>Article</Link>
                         </li>
                     </ul>
-                </nav>
                 <Link to='../login' className="headerToLogin">Login</Link>
+                </nav>
+                <i onClick={(e)=>setDrawer(!drawer)} ><RxHamburgerMenu/></i>
             </div>
         </div>
     </header>

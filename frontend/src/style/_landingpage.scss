@@ -13,8 +13,6 @@
             transform: translateX(50%);
         }
         .scaleImage{
-            // padding: 0;
-            // margin: 0;
             width: 920px;
             position: absolute;
             bottom: -4px;
@@ -33,13 +31,16 @@
     }
     .aboutBeFit{
         width: 100%;
-        height: 110vh;
+        // height: 110vh;
         background-color: #434343;
         display: flex;
         align-items: center;
         gap: 10em;
         // background-color: red;
         padding: 9em;
+        padding-bottom: 12em;
+        color: white;
+
         .logoArea{
             position:relative;
             &::after{
@@ -54,11 +55,19 @@
                 filter: blur(5px);
             }
             margin-bottom: 20px;
+            img{
+                width: 100%;
+            }
+        }
+        h2{
+            display: none;
+            font-size: 6rem;
+            text-align: center;
         }
         .textArea{
-            color: white;
+            flex: 1;
             h2{
-                font-size: 6rem;
+                display: block;
                 text-align: end;
             }
             p{
@@ -72,13 +81,14 @@
     }
     .calculatorSection{
         width: 100%;
-        height: 100vh;
+        height: 125vh;
         background: url('../images/backgroundCalculator.png');
         background-size: cover;
         margin-top: -13em;
         position: relative;
         .container{
-            width: 70%;
+            // background-color: green;
+            width: 80%;
             justify-content: space-between;
             // background-color: red;
             position: absolute;
@@ -88,6 +98,8 @@
             display: flex;
             align-items: center;
             .takeline{
+                // background-color: red;
+                width: 40%;
                 font-size: 4.5rem;
                 color: white;
             }
@@ -197,7 +209,7 @@
     .aboutUs{
         padding: 6em;
         width: 100%;
-        height: 100vh;
+        // height: 100vh;
         background-color: $redBrown;
         h2{
             font-size: 4rem;

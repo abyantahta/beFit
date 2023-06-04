@@ -17,6 +17,7 @@ function Landing() {
         </div>
       </section>
       <section className="aboutBeFit">
+          <h2>Apa itu BeFit?</h2>
         <div className="logoArea">
           <img src={logo} alt="" />
         </div>
@@ -28,7 +29,7 @@ function Landing() {
       </section>
       <section className="calculatorSection">
         <div className="container">
-          <h2 className='takeline'>Ayo Cari < br /> Berat Badan <br /> Idealmu!</h2>
+          <h2 className='takeline'>Ayo Cari Berat Badan Idealmu!</h2>
           <form className="calculator">
             <h2>Kalkulator BMI</h2>
             <div className="inputArea">
