@@ -1,8 +1,16 @@
 import React from 'react'
-
-function FoodList() {
+import FoodItem from './FoodItem'
+function FoodList({foods}) {
+  console.log(foods)
   return (
-    <div>FoodList</div>
+    <>
+    {
+      foods.map((food)=>(
+        <FoodItem key={food.id} food={food} />
+      ))
+                
+    }
+    </>
   )
 }
 
