@@ -60,14 +60,17 @@
         
         .foodItem{
             .imgArea{
+                height: 180px;
                 position: relative;
                 img{
                     border-radius: 15px;
                     width: 100%;
+                    object-fit: cover;
+                    height: 100%;
                     
                 }
                 .foodContentContainer{
-                    z-index: 99 ;
+                    z-index: 9 ;
                     background-color: white;
                     position: absolute;
                     border-radius: 15px;
@@ -78,6 +81,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    // height: 200px;
                     .foodContent{
                         padding: 15px;
                         width: 80%;
@@ -87,8 +91,15 @@
                         align-items: center;
                     }
                     .foodName{
+                        // background-color: red;
                         color: $green;
                         font-size: 1.5rem;
+                        text-align: center;
+                        white-space: nowrap;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        // text-overflow: ;
                     }
                     .categories{
                         font-size: 1rem;

@@ -14,10 +14,10 @@ function Header() {
                 <nav>
                     <ul>
                         <li>
-                            <Link className='navItem'>Home</Link>
+                            <Link to='../' className='navItem'>Home</Link>
                         </li>
                         <li>
-                            <Link className='navItem'>Food</Link>
+                            <Link to='../food' className='navItem'>Food</Link>
                         </li>
                         <li>
                             <Link className='navItem'>Workout</Link>
