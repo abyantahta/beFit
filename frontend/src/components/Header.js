@@ -13,7 +13,7 @@ function Header() {
                 <h2>BeFit</h2>
             </div>
             <div className="right">
-                <nav className={(drawer? 'hide': '')}>
+                <nav className={(drawer? 'show': '')}>
                     <ul>
                         <li>
                             <Link to='../' className='navItem'>Home</Link>

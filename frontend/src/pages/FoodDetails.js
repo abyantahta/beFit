@@ -14,7 +14,7 @@ function FoodDetails() {
                 const data = await FoodListSource.getDetail(idParams.id)
                 console.log(data)
                 setFood(data)
-                setInstructions(data.analyzedInstructions[0].steps)
+                setInstructions(data.analyzedInstructions[0].steps) 
                 setNutrients(data.nutrition.nutrients.filter((nutrient)=>{
                   return nutrient.name==='Calories'||nutrient.name==='Protein'||nutrient.name==='Fat'||nutrient.name==='Carbohydrates'
                 }))
@@ -34,14 +34,14 @@ function FoodDetails() {
           
           {
             nutrients?.map((nutrient)=>(
-              <li><span>{nutrient.amount}</span>{nutrient.name}</li>
+              <li><span>{nutrient.amount}</span>  {nutrient.name}</li>
             ))
           }
 
         </ul>
         <div className="foodSummary">
           <h2 className="subHead">About Food</h2>
-          <h4> {food.summary}</h4>
+          <h4 dangerouslySetInnerHTML={{__html : food.summary}}></h4>
         </div>
         <div className="imgAndIngredients">
           <div className="imgArea">

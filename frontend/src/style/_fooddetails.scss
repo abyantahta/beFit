@@ -2,12 +2,10 @@
     background-color: $green;
     padding-top: 6em;
     width: 100%;
-    // height: 100vh;
     .container{
         color: $green;
         background-color: white;
         margin: 0 7em;
-        // height: 90vh;
         border-radius: 40px;
         padding: 3em 5em;
         .foodName{
@@ -20,7 +18,6 @@
                 font-weight: 900;
             }
             margin-top: 1em;
-            // background-color: blue;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -34,11 +31,17 @@
         }
         .foodSummary{
             margin-top: 3em;
+            text-align: justify;
             h4{
                 font-size: 1.1rem;
                 font-weight: 600;
                 margin-top: 8px;
                 line-height: 25px;
+                a{
+                    text-decoration: none;
+                    color: $green;
+                    pointer-events: none;
+                }
             }
         }
         .imgAndIngredients{
@@ -62,6 +65,7 @@
                     list-style-position: inside;
                     margin-top: 1em;
                     li{
+                        // line-height: 25px;
                         font-size: 1.2rem;
                         line-height: 25px;
                     }
@@ -72,10 +76,14 @@
             // background-color: blue;
             margin-top: 1em;
             ol{
+                line-height: 20px;
+                margin-top: 1em;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
                 li{
-                    list-style: circle;
-                    list-style-position: inside;
-                    line-height: 25px;
+                    list-style: none;
+                    
                 }
             }
             font-size: 1.2rem;
