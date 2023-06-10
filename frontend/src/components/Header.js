@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {RxHamburgerMenu} from 'react-icons/rx'
+import logo from '../images/logo.png'
+
 function Header() {
     const [drawer,setDrawer] = useState(false)
   return (
@@ -8,7 +10,7 @@ function Header() {
         <div className="headerContainer">
             <div className="left">
                 <div className="img">
-                    <img src="" alt="" />
+                    <img src={logo} alt="" />
                 </div>
                 <h2>BeFit</h2>
             </div>

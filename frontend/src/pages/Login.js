@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 import {BsEye,BsEyeSlash} from 'react-icons/bs'
+import logo from '../images/logo.png'
 function Login() {
   const [passwordType,setPasswordType] = useState('password')
   const [username,setUsername] = useState('')
@@ -20,7 +21,7 @@ function Login() {
       <div className="loginContainer">
         <div className="beFitBrand">
           <div className="imgArea">
-            <img src="" alt="" />
+            <img src={logo} alt="" />
           </div>
           <h2 className="brandName">BeFit.</h2>
           <p className="brandTakeline"><span>

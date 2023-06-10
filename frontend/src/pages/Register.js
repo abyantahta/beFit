@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 import {BsEye,BsEyeSlash} from 'react-icons/bs'
+import logo from '../images/logo.png'
 function Register() {
   const [passwordType,setPasswordType] = useState('password')
   const [username,setUsername] = useState('')
@@ -73,7 +74,7 @@ function Register() {
             Maintain Your Ideal Weight
             </p>
           <div className="imgArea">
-            <img src="" alt="" />
+            <img src={logo} alt="" />
           </div>
         </div>
 
