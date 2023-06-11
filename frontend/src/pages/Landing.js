@@ -13,6 +13,7 @@ function Landing() {
   const [tinggi,setTinggi] = useState(0);
   const [gender,setGender] = useState('male'); 
   const [BMI,setBMI] = useState(0)
+  // const [BMI,setBMI] = useState('')
   // console.log(berat)
   // console.log(tinggi)
   const handleBMICalculator = async (e) =>{

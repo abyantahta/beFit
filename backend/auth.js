@@ -7,14 +7,16 @@ const register=(data)=>{
         const hashedPassword = await bcrypt.hash(data.password, 8)
         const client = newClient()
         client.connect()
+        console.log('palpale')
         client.query(`INSERT into public.user(username, email, password, phone_number, name)
-                      values('${data.username}','${data.email}','${hashedPassword}','${data.phone_number}', '${data.name}')`, (err)=>{
-                        if(err){
-                            reject(err.message)
-                        }
-                        resolve({message : "Register success"})
-                        client.end()
-                    })
+        values('${data.username}','${data.email}','${hashedPassword}','${data.phone_number}', '${data.name}')`, (err)=>{
+            console.log('palpale')
+            if(err){
+                reject(err.message)
+            }
+            resolve({message : "Register success"})
+            client.end()
+        })
     })
 }
 

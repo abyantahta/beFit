@@ -1,10 +1,10 @@
 const express=require('express');
-const router =  require('./routes/router.js');
-const cors = require('./cors')
+const router =  require('./routes/router');
+const cors = require('cors')
 const { register, login } = require('./auth');
 const app = express();
 app.use(cors());
-app.use(router)
+app.use('/api', router)
 
 app.use(express.json());
 app.get("/",(req, res)=>{
@@ -12,6 +12,7 @@ app.get("/",(req, res)=>{
 })
 app.post("/register", (req, res)=>{
     try {
+        console.log(req.body)
         if(!(req.body.username && req.body.email && req.body.password && req.body.phone_number && req.body.name)){
             res.status(400).json({message : "Data Belum Lengkap"})
         }

@@ -4,4 +4,4 @@ const Calculator = async (req,res) =>{
     const BMI = (berat/((tinggi/100)*(tinggi/100))).toFixed(2);
     res.send({BMI})
 }
-export default Calculator
+module.exports = Calculator
