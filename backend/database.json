@@ -1,0 +1,11 @@
+{
+    "dev": {
+      "driver": "pg",
+      "host": "localhost",
+      "database": "Befit",
+      "user": "postgres",
+      "password": "postgres",
+      "port": 5432,
+      "multipleStatements": true
+    }
+  }
