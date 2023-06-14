@@ -12,15 +12,15 @@ function Landing() {
   const [berat,setBerat] = useState(0);
   const [tinggi,setTinggi] = useState(0);
   const [gender,setGender] = useState('male'); 
-  const [BMI,setBMI] = useState(0)
-  // console.log(berat)
-  // console.log(tinggi)
+  const [resultCalculator,setResultCalculator] = useState({})
   const handleBMICalculator = async (e) =>{
     e.preventDefault();
     const response = await axios.post('http://localhost:4000/calculateBMI',{
       berat,tinggi,gender
     });
-    setBMI(response.data.BMI);
+    console.log(response)
+    console.log(response.data)
+    setResultCalculator(response.data);
   }
   return (
     <div id="home">
@@ -76,7 +76,7 @@ function Landing() {
         </div>
 
       </section>
-      { BMI===0 ? '':(
+      { resultCalculator.BMI===undefined ? '':(
         <section id="categoriesSection">
           <h2>Result</h2>
           <div className="container">
@@ -84,18 +84,20 @@ function Landing() {
               <div className="bodyImage">
                 <img src={bodyImage} alt="" />
                 <div className="text">
-                <h3>{BMI}</h3>
-                <h4>kurus</h4>
+                <h3>{resultCalculator.BMI}</h3>
+                <h4>{resultCalculator.desc}</h4>
                 </div>
               </div>
             </div>
             <div className="resultDesc">
-              <h3>BMI kamu tergolong <span>kurus</span></h3>
+              <h3>BMI kamu tergolong <span>{resultCalculator.desc}</span></h3>
               <h4>Berikut catatan dari kami!</h4>
               <ul>
-                <li>Tingkatkan konsumsi protein untuk mencapai berat badan ideal</li>
-                <li>Untuk mencapai berat badan ideal kamu perlu makan makanan bergizi dan tingkatkan frekuensi makan</li>
-                <li>Tingkatkan aktivitas dan berolahraga secara teratur, dan lakukan pola hidup sehat</li>
+                {
+                  resultCalculator.tips.map((tip)=>(
+                    <li>{tip}</li>
+                  ))
+                }
               </ul>
               <a className='refreshBMI' href="#calculatorSection">
                 Perbarui Hasil BMI
@@ -112,16 +114,6 @@ function Landing() {
               </div>
             </div>
           </div>
-          {/* <div className="imgContent">
-            <div className="imgContainer">
-              <img src={foodImage} alt="" />
-              <h3>Food</h3>
-            </div>
-            <div className="imgContainer">
-              <img src={workoutImage} alt="" />
-              <h3>Workout</h3>
-            </div>
-          </div> */}
         </section>
       )
       }

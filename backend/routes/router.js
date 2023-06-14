@@ -1,5 +1,5 @@
 import express from 'express'
-import  Calculator  from '../controllers/Calculator.js'
+import  {Calculator}  from '../controllers/Calculator.js'
 
 
 const router = express.Router()
