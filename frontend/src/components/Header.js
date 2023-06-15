@@ -24,13 +24,13 @@ function Header() {
                             <Link to='../food' className='navItem'>Food</Link>
                         </li>
                         <li>
-                            <Link className='navItem'>Workout</Link>
+                            <Link to='../workout' className='navItem'>Workout</Link>
                         </li>
                         <li>
                             <Link className='navItem'>Bookmark</Link>
                         </li>
                         <li>
-                            <Link className='navItem'>Article</Link>
+                            <Link to='../article' className='navItem'>Article</Link>
                         </li>
                     </ul>
                 <Link to='../login' className="headerToLogin">Login</Link>

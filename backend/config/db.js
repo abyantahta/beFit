@@ -9,7 +9,6 @@ const connectDB = async () => {
     const db = mongoose.connection;
     db.on('error', (error)=> console.log(error));
     db.once('open', ()=> console.log('Database connected'))
-// const mongoose = require('mongoose');
 };
 
 export default connectDB;
