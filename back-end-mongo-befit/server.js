@@ -13,7 +13,7 @@ const dbConfig = {
     useUnifiedTopology: true,
     useFindAndModify: false,
 }
-
+// palpale
 db.mongoose.connect(db.url, dbConfig)
     .then(() => { console.log('Connected to the database!'); })
     .catch(err => {
