@@ -130,13 +130,13 @@ function Landing() {
               <div className="imgArea">
                 <img src="" alt="" />
               </div>
-              <h3>Abyan Tahta</h3>
+              <h3>Nia Millatul Izza</h3>
             </div>
             <div className="item">
               <div className="imgArea">
                 <img src="" alt="" />
               </div>
-              <h3>Abyan Tahta</h3>
+              <h3>Rizky Novian</h3>
             </div>
         </div>
       </section>

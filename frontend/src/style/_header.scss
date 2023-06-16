@@ -4,9 +4,9 @@ header{
     position: fixed;
     top: 0;
     z-index: 99;
-    background-color: transparent;
-    backdrop-filter: blur(10px);
-    color: black;
+    background-color: rgba(0, 0, 0, 0.211);
+    backdrop-filter: blur(20px);
+    color: white;
     .headerContainer{
         display: flex;
         justify-content: space-between;
@@ -53,12 +53,12 @@ header{
                 li{
                     display: inline-block;
                     .navItem{
-                    color: black;
+                    color: white;
                     text-decoration: none;
                     font-weight: 600;
-                    font-size: 1.1rem;
+                    font-size: 1.2rem;
                     &:hover{
-                        // background-color: red;
+                        color: #BA8760;
                         padding-bottom: 3px;
                         border-bottom: 2px solid $brown
                     }
@@ -75,7 +75,10 @@ header{
                 border-radius: 99px;
                 text-decoration: none;
                 font-weight: 700;
-
+                &:hover{
+                    background-color: black;
+                    color: white;
+                }
             }
             i{
                 // background-color: red;
