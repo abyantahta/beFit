@@ -5,12 +5,16 @@ import { BiSearchAlt2 } from 'react-icons/bi';
 import FoodListSource from '../data/foodList-source';
 import axios from 'axios'
 import FoodList from '../components/FoodList';
+import { useSelector } from 'react-redux';
+import { setToCaloriesAndProtein } from '../utils/setToCaloriesAndProtein';
 function Food() {
     const [foods,setFoods] = useState([])
+    const {BMI} = useSelector(state=> state.counter)
+    const {maxCalories,minProtein} = setToCaloriesAndProtein(BMI.BMI || 0)
     useEffect(()=>{
         async function fetchDataRecipe(){
             try {
-                const data = await FoodListSource.getList()
+                const data = await FoodListSource.getList(maxCalories,minProtein)
                 setFoods(data)
             } catch (error) {
                 console.log(error)

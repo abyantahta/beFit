@@ -31,7 +31,6 @@ function FoodDetails() {
       <div className="container">
         <h2 className="foodName">{food.title}</h2>
         <ul className="nutrients">
-          
           {
             nutrients?.map((nutrient)=>(
               <li><span>{nutrient.amount}</span>  {nutrient.name}</li>

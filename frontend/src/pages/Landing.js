@@ -7,21 +7,34 @@ import workoutImage from '../images/workout.png'
 import foodImage from '../images/foodImage.png'
 import bodyImage from '../images/bodyPhoto.png'
 import {HiRefresh} from 'react-icons/hi'
+// import { useSelector } from 'react-redux'
 import axios from 'axios'
+import { useDispatch, useSelector } from 'react-redux'
+import { update } from '../utils/bmi-slice'
 function Landing() {
   const [berat,setBerat] = useState(0);
   const [tinggi,setTinggi] = useState(0);
-  const [gender,setGender] = useState('male'); 
-  const [resultCalculator,setResultCalculator] = useState({})
+  const [gender,setGender] = useState('male');
+  const [empty,setEmpty] = useState(false);
+  const dispatch = useDispatch();
+  // console.log(empty)
   const handleBMICalculator = async (e) =>{
     e.preventDefault();
+    if(berat===0 || tinggi===0){
+      setEmpty(true)
+      return;
+    }
+    setEmpty(false)
     const response = await axios.post('http://localhost:4000/calculateBMI',{
       berat,tinggi,gender
     });
-    console.log(response)
-    console.log(response.data)
-    setResultCalculator(response.data);
+    const BMI = response.data;
+    dispatch(update({BMI}))
+
   }
+  const {BMI} = useSelector(state=> state.counter)
+  // console.log(BMI)
+  // console.log(data)
   return (
     <div id="home">
       <section id="landingPage">
@@ -51,11 +64,11 @@ function Landing() {
             <h2>Kalkulator BMI</h2>
             <div className="inputArea">
               <label htmlFor="">Berat Badan (kg) : </label>
-              <input type="number" onChange={(e)=> setBerat(e.target.value)} />
+              <input required type="number" onChange={(e)=> setBerat(e.target.value)} />
             </div>
             <div className="inputArea">
               <label htmlFor="">Tinggi Badan (cm) : </label>
-              <input type="number" onChange={(e)=> setTinggi(e.target.value)} />
+              <input required type="number" onChange={(e)=> setTinggi(e.target.value)} />
             </div>
             <div className="inputArea">
               <label htmlFor="">Jenis Kelamin : </label>
@@ -70,13 +83,18 @@ function Landing() {
                 </div>
               </div>
             </div>
+            {
+              !empty ? '' : (
+                <p>Mohon isi seluruh form</p>
+              )
+            }
             <button type="submit" onClick={handleBMICalculator}>Hitung</button>
             
           </form>
         </div>
 
       </section>
-      { resultCalculator.BMI===undefined ? '':(
+      { BMI === 0 ? '':(
         <section id="categoriesSection">
           <h2>Result</h2>
           <div className="container">
@@ -84,18 +102,18 @@ function Landing() {
               <div className="bodyImage">
                 <img src={bodyImage} alt="" />
                 <div className="text">
-                <h3>{resultCalculator.BMI}</h3>
-                <h4>{resultCalculator.desc}</h4>
+                <h3>{BMI.BMI}</h3>
+                <h4>{BMI.desc}</h4>
                 </div>
               </div>
             </div>
             <div className="resultDesc">
-              <h3>BMI kamu tergolong <span>{resultCalculator.desc}</span></h3>
+              <h3>BMI kamu tergolong <span>{BMI.desc}</span></h3>
               <h4>Berikut catatan dari kami!</h4>
               <ul>
                 {
-                  resultCalculator.tips.map((tip)=>(
-                    <li>{tip}</li>
+                  BMI.tips.map((tip,index)=>(
+                    <li key={index}>{tip}</li>
                   ))
                 }
               </ul>

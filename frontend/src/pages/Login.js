@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 import {BsEye,BsEyeSlash} from 'react-icons/bs'
 import logo from '../images/logo.png'
+import { useSelector } from 'react-redux'
 function Login() {
   const [passwordType,setPasswordType] = useState('password')
   const [username,setUsername] = useState('')
@@ -15,7 +16,8 @@ function Login() {
     }
     setPasswordType('password')
   }
-
+  const {title,price} = useSelector(state => state.counter)
+  console.log(title,price,'wakwaw')
   return (
     <div id="login">
       <div className="loginContainer">

@@ -5,8 +5,8 @@ import API_ENDPOINT from '../global/api-endpoint';
 // import { hideLoader, showLoader } from '../utils/loader-initiator';
 
 class FoodListSource {
-  static async getList() {
-    const response = await axios.get(API_ENDPOINT.DIETFOODS);
+  static async getList(maxCalories,minProtein) {
+    const response = await axios.get(API_ENDPOINT.DIETFOODS(maxCalories,minProtein));
     const data = response.data;
     // console.log(data);
     return data;

@@ -26,7 +26,7 @@ function App() {
             <Route path='/article' exact element={<Article/>}/>
             <Route path='/article/:id' exact element={<ArticleDetails/>}/>
             <Route path='/workout' exact element={<Workout/>}/>
-            <Route path='/workout/:id' exact element={<WorkoutDetails/>}/>
+            {/* <Route path='/workout/:id' exact element={<WorkoutDetails/>}/> */}
           </Routes>
       </Router>
     </>
