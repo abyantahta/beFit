@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import {BsEye,BsEyeSlash} from 'react-icons/bs'
 import logo from '../images/logo.png'
 import { useSelector } from 'react-redux'
+import axios from 'axios'
 function Login() {
   const [passwordType,setPasswordType] = useState('password')
   const [username,setUsername] = useState('')
@@ -16,6 +17,22 @@ function Login() {
     }
     setPasswordType('password')
   }
+
+  const handleSubmit = async(e)=>{
+    e.preventDefault()
+    try{
+      const data = {
+        username,
+        password
+      }
+      const response = await axios.post('https://capstone-dicoding-backend.up.railway.app/login', data)
+      console.log(response.data.message)
+    }
+    catch(error){
+      console.log(error)
+    }
+  }
+
   const {title,price} = useSelector(state => state.counter)
   console.log(title,price,'wakwaw')
   return (
@@ -32,13 +49,13 @@ function Login() {
             </p>
         </div>
         <div className="formContainer">
-          <form action="">
+          <form action="" onSubmit={handleSubmit}>
             <div className="inputArea">
-              <input type="text" id='inputUsername'placeholder='Username' onClick={(e)=>setUsername(e.target.value)} />
+              <input type="text" id='inputUsername'placeholder='Username' onChange={(e)=>setUsername(e.target.value)} />
               <label hidden="hidden" htmlFor="inputUsername"></label>
             </div>
             <div className="inputArea">
-              <input type={passwordType} id='inputPassword' placeholder='Password' onClick={(e)=>setPassword(e.target.value)} />
+              <input type={passwordType} id='inputPassword' placeholder='Password' onChange={(e)=>setPassword(e.target.value)} />
               <label hidden="hidden" htmlFor="inputPassword"></label>
               <i onClick={toggleShowPassword}>
                 { 
