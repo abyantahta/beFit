@@ -110,6 +110,35 @@
                     "Lepaskan sedikit crunch. Tekuk kaki kanan dan luruskan kaki kiri, lalu bawa siku kiri ke lutut kanan.",
                     "Ulangi untuk jumlah repetisi yang diinginkan."
             ]
+        },
+        {
+            "id": 11,
+            "title" : "Wall Sit",
+            "imageUrl" : "https://thumbs.gfycat.com/ShowyLinearFiddlercrab-max-1mb.gif",
+            "description": "Bangun kekuatan otot, di samping membantu meningkatkan daya tahan pada otot di bagian bawah tubuh Anda.",
+            "direction": [
+                    "Berdirilah dengan menghadapkan punggung ke dinding sekitar setengah meter dari dinding.",
+                    "Geserlah punggung ke bawah dalam keadaan tetap menempel pada dinding sampai kaki menekuk hingga membentuk sudut 90 derajat.",
+                    "Ketika melakukan gerakan tersebut, pastikan bahu, punggung atas serta belakang kepala tetap dalam keadaan lurus dan tetap menempel dinding.",
+                    "Kedua kaki harus menapak kokoh di tanah dengan berat yang merata.",
+                    "Jika diperlukan, luruskan kaki ke depan secara bergantian.",
+                    "Tahanlah hingga 30 detik atau sesuai dengan kekuatan Anda."
+            ]
+        },
+        {
+            "id": 12,
+            "title" : "Triceps Dip",
+            "imageUrl" : "https://thumbs.gfycat.com/DefenselessHonestJay-size_restricted.gif",
+            "description": "Perkuat tubuh bagian atas dan bantu membentuk otot trisep Anda.",
+            "direction": [
+                    "Posisikan tubuh dengan membelakangi bangku dan menekan bangku.",
+                    "Pastikan posisi tangan selebar bahu.",
+                    "Jari-jari tangan juga harus menghadap ke depan.",
+                    "Julurkan kaki ke depan hingga tumit saja yang menyentuh lantai.",
+                    "Turunkan tubuh secara perlahan sampai posisi sendi bahu berada di bawah siku.",
+                    "Dorong kembali ke atas sampai posisi siku berdiri hampir lurus.",
+                    "Ulangi gerakan di atas."
+            ]
         }
     ]
 }
