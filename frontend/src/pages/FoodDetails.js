@@ -6,7 +6,6 @@ function FoodDetails() {
   const [food,setFood] = useState({})
   const [instructions,setInstructions]= useState([])
   const [nutrients,setNutrients]= useState([])
-  // let food;
   const idParams = useParams();
   useEffect(()=>{
         async function fetchDetails(){
@@ -69,72 +68,6 @@ function FoodDetails() {
         </div>
       </div>
     </div>
-    // <>    
-    // <h1>a</h1>
-    // <h1>a</h1>
-    // <h1>a</h1>
-    // <h1>a</h1>
-    // <h1>a</h1>
-    // <h1>a</h1>
-    // <h1>{food.id}</h1>
-    //   <br />
-    //   <br />
-    //     <h1>Dish Name</h1>
-    // <p>{food.title}</p>
-    // {/* <h2>{nutrients}</h2> */}
-    //   <br />
-    //   <br />
-    //     <h1>Dish types</h1>
-    // <ul>
-    //   {
-    //     food.dishTypes?.map((dishType)=>(
-    //       <li>{dishType}</li>
-    //     ))
-    //   }
-    // </ul>
-    //   <br />
-    //   <br />
-    //     <h1>Nutrients</h1>
-    // <ul>
-    //   {
-    //     nutrients?.map((nutrient)=>(
-    //       <li>{nutrient.amount}{nutrient.name}</li>
-    //     ))
-    //   }
-    // </ul>
-    //   <br />
-    //   <br />
-    //     <h1>Ingredients</h1>
-    // <ul>
-    //   {
-    //     food.extendedIngredients?.map((ingredient)=>(
-    //       <li>{ingredient.original}</li>
-    //     ))
-    //   }
-    // </ul>
-    // <br />
-    // <br />
-    //   <h1>Instruction</h1>
-    //     <ul>
-    //   {
-    //     instructions?.map((instruction)=>(
-    //       <li>{instruction.number}. {instruction.step}</li>
-    //     ))
-    //   }
-    // </ul>
-    // {/* <h1>{ingredients}</h1> */}
-    
-    // {/* {food.instructions} */}
-    // {/* <h1>{food}</h1>
-    // <h1>{food}</h1>
-    // <h1>{food}</h1>
-    // <h1>{food}</h1>
-    // <h1>{food}</h1>
-    // <h1>{food}</h1>
-    // <h1>{food}</h1> */}
-    // {/* <h1>{food[0].instructions}</h1> */}
-    // </>
-
   )
 }
 

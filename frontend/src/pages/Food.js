@@ -11,6 +11,7 @@ function Food() {
     const [foods,setFoods] = useState([])
     const {BMI} = useSelector(state=> state.counter)
     const {maxCalories,minProtein} = setToCaloriesAndProtein(BMI.BMI || 0)
+    const [query,setQuery] = useState('')
     useEffect(()=>{
         async function fetchDataRecipe(){
             try {
@@ -20,8 +21,10 @@ function Food() {
                 console.log(error)
             }
         }
+        // console.log(query)
         fetchDataRecipe();
     },[])
+    console.log(query)
   return (
     <div id="food">
         <section className="heroImage">
@@ -30,7 +33,7 @@ function Food() {
             <h2 className='subTitle'>Our recommendation</h2>
             <form action="" className='filterFoods'>
                 <div className="inputArea">
-                    <input placeholder='Search...' id='searchFood' type="text" />
+                    <input placeholder='Search...' id='searchFood' type="text" onChange={(e)=>setQuery(e.target.value)}/>
                     <label hidden='hidden' htmlFor="searchFood"></label>
                     <i> < BiSearchAlt2 /></i>
                 </div>

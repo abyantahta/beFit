@@ -8,7 +8,6 @@ function FoodList({foods}) {
       foods.map((food)=>(
         <FoodItem key={food.id} food={food} />
       ))
-                
     }
     </>
   )

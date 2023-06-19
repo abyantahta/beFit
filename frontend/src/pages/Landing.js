@@ -3,11 +3,8 @@ import scaleImage from '../images/scaleImage.png'
 import jarumImage from '../images/jarum.png'
 import logo from '../images/logo.png'
 import food from '../images/food.png'
-import workoutImage from '../images/workout.png'
-import foodImage from '../images/foodImage.png'
 import bodyImage from '../images/bodyPhoto.png'
 import {HiRefresh} from 'react-icons/hi'
-// import { useSelector } from 'react-redux'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
 import { update } from '../utils/bmi-slice'
@@ -17,7 +14,6 @@ function Landing() {
   const [gender,setGender] = useState('male');
   const [empty,setEmpty] = useState(false);
   const dispatch = useDispatch();
-  // console.log(empty)
   const handleBMICalculator = async (e) =>{
     e.preventDefault();
     if(berat===0 || tinggi===0){
@@ -85,7 +81,7 @@ function Landing() {
             </div>
             {
               !empty ? '' : (
-                <p>Mohon isi seluruh form</p>
+                <p className='isEmpty'>Mohon isi seluruh form</p>
               )
             }
             <button type="submit" onClick={handleBMICalculator}>Hitung</button>

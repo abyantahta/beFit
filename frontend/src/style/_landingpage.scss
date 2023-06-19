@@ -179,8 +179,18 @@
 
                     }
                 }
+                .isEmpty{
+                    // background-color: red;
+                    margin-top: 5px;
+                    text-align: center;
+                    font-size: 1rem;
+                    color: red;
+                    // margin;
+                    margin-top: 15px;
+                    font-weight: 600;
+                }
                 button{
-                    margin-top: 1em;
+                    margin-top: .7em;
                     background-color: $redBrown;
                     color: white;
                     width: 100%;

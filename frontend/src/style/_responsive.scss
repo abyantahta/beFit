@@ -1,7 +1,7 @@
 @media only screen and (max-width: 1080px) {
     // HOME
     #home{
-        .landingPage{
+        #landingPage{
             h1{
                 top: 20%;
                 font-weight: 900;
@@ -16,7 +16,7 @@
                 }
             }
         }
-        .aboutBeFit{
+        #aboutBeFit{
             padding: 5em 6em 11em 6em;
             flex-direction: column;
             gap: 4em;
@@ -35,7 +35,7 @@
                 }
             }
         }
-        .calculatorSection{
+        #calculatorSection{
             .container{
                 .takeline{
                     font-size: 4rem;
@@ -50,7 +50,7 @@
                 flex-direction: column;
             }
         }
-        .categoriesSection{
+        #categoriesSection{
             // margin-top: 4em;
             padding-bottom: 10em;
             height: fit-content;
@@ -60,7 +60,7 @@
                 flex-direction: column;
             }
         }
-        .aboutUs{
+        #aboutUs{
         .container{
                 flex-direction: column;
                 align-items: center;
