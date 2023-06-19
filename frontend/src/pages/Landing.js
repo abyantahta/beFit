@@ -5,9 +5,14 @@ import logo from '../images/logo.png'
 import food from '../images/food.png'
 import bodyImage from '../images/bodyPhoto.png'
 import {HiRefresh} from 'react-icons/hi'
+import abyan from '../images/abyan.jpg'
+import workout from '../images/workout.png'
+import kiki from '../images/kiki.jpg'
+import milla from '../images/milla.jpg'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
 import { update } from '../utils/bmi-slice'
+import { Link } from 'react-router-dom'
 function Landing() {
   const [berat,setBerat] = useState(0);
   const [tinggi,setTinggi] = useState(0);
@@ -121,10 +126,18 @@ function Landing() {
             <div className="recommendation">
               <h3>Lihat rekomendasi makanan sesuai dengan BMI mu !</h3>
               <div className="imgContainer">
-                <div className="imgArea">
-                  <img src={food} alt="" />
-                </div>
-                <h4>Food</h4>
+                <Link to='./food' className="img">
+                  <div className="imgArea">
+                    <img src={food} alt="" />
+                  </div>
+                  <h4>Food</h4>
+                </Link>
+                <Link to='./workout' className="img">
+                  <div className="imgArea">
+                    <img src={workout} alt="" />
+                  </div>
+                  <h4>Workout</h4>
+                </Link>
               </div>
             </div>
           </div>
@@ -136,19 +149,19 @@ function Landing() {
         <div className="container">
             <div className="item">
               <div className="imgArea">
-                <img src="" alt="" />
+                <img src={abyan} alt="" />
               </div>
               <h3>Abyan Tahta</h3>
             </div>
             <div className="item">
               <div className="imgArea">
-                <img src="" alt="" />
+                <img src={milla} alt="" />
               </div>
               <h3>Nia Millatul Izza</h3>
             </div>
             <div className="item">
               <div className="imgArea">
-                <img src="" alt="" />
+                <img src={kiki} alt="" />
               </div>
               <h3>Rizky Novian</h3>
             </div>
