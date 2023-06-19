@@ -30,13 +30,6 @@ function Food() {
         </section>
         <section className="foodSection">
             <h2 className='subTitle'>Our recommendation</h2>
-            <form action="" className='filterFoods'>
-                <div className="inputArea">
-                    <input placeholder='Search...' id='searchFood' type="text" onChange={(e)=>setQuery(e.target.value)}/>
-                    <label hidden='hidden' htmlFor="searchFood"></label>
-                    <i> < BiSearchAlt2 /></i>
-                </div>
-            </form>
             <div className="foodsContainer">
                 <FoodList foods={foods} />
             </div>

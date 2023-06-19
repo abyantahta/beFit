@@ -9,7 +9,7 @@ import abyan from '../images/abyan.jpg'
 import workout from '../images/workout.png'
 import kiki from '../images/kiki.jpg'
 import milla from '../images/milla.jpg'
-import axios from 'axios'
+import {bmiCalculation} from '../utils/bmi-calculation'
 import { useDispatch, useSelector } from 'react-redux'
 import { update } from '../utils/bmi-slice'
 import { Link } from 'react-router-dom'
@@ -26,10 +26,8 @@ function Landing() {
       return;
     }
     setEmpty(false)
-    const response = await axios.post('http://localhost:4000/calculateBMI',{
-      berat,tinggi,gender
-    });
-    const BMI = response.data;
+    const response = bmiCalculation(berat,tinggi)
+    const BMI = response;
     dispatch(update({BMI}))
 
   }

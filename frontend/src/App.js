@@ -25,9 +25,6 @@ function App() {
             <Route path='/food/:id' exact element={<FoodDetails/>}/>
             <Route path='/article/:id' exact element={<ArticleDetails/>}/>
             <Route path='/article' exact element={<Article/>}/>
-            {/* <Route path='/article/:id' exact element={<ArticleDetails/>}/> */}
-            
-            {/* <Route path='/article/:id' exact element={<ArticleDetails/>}/> */}
             <Route path='/workout/:id' exact element={<WorkoutDetails/>}/>
             <Route path='/workout' exact element={<Workout/>}/>
           </Routes>

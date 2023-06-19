@@ -1,9 +1,8 @@
-
-const dataDesc = (BMI,res) => {
-    console.log(BMI)
-    switch (true) {
+export const bmiCalculation = (berat,tinggi) =>{
+    const BMI = (berat/((tinggi/100)*(tinggi/100))).toFixed(2);
+        switch (true) {
         case (BMI < 18.5):
-            res.send({
+            return({
                 BMI : BMI,
                 desc : "kurus",
                 tips : [
@@ -11,20 +10,18 @@ const dataDesc = (BMI,res) => {
                     "Untuk mencapai berat badan ideal kamu perlu makan makanan bergizi dan tingkatkan frekuensi makan",
                     "Tingkatkan aktivitas dan berolahraga secara teratur, dan lakukan pola hidup sehat"
                 ]
-            },)
-            break;
+            })
         case (BMI < 25):
-            res.send({
+            return({
                 BMI : BMI,
                 desc : "ideal",
                 tips : [
                     "Pertahankan asupan kalori untuk memenuhi kebutuhan kalori harian",
                     "Jaga keseimbangan asupan makanan, jalankan pola rutin hidup sehat, ",
                 ]
-            },)
-            break;
+            })
         case (BMI < 30):
-            res.send({
+            return({
                 BMI : BMI,
                 desc : "overweight",
                 tips : [
@@ -33,10 +30,9 @@ const dataDesc = (BMI,res) => {
                     "Untuk mencapai berat badan ideal kamu perlu makan makanan bergizi dan tingkatkan frekuensi makan",
                     "Tingkatkan aktivitas dan berolahraga secara teratur, dan lakukan pola hidup sehat"
                 ]
-            },)
-            break;
+            })
         default:
-            res.send({
+            return({
                 BMI : BMI,
                 desc : "obesity",
                 tips : [
@@ -46,11 +42,5 @@ const dataDesc = (BMI,res) => {
                     "Tingkatkan aktivitas dan berolahraga secara teratur, dan lakukan pola hidup sehat"
                 ]
             })
-            break;
     }
-}
-export const Calculator = async (req,res) =>{
-    const {tinggi,berat,gender} = req.body;
-    const BMI = (berat/((tinggi/100)*(tinggi/100))).toFixed(2);
-    dataDesc(BMI,res);
 }
