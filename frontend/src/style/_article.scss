@@ -1,7 +1,8 @@
 #article{
     background-color: $brown;
     width: 100%;
-    height: 500vh;
+    padding-bottom: 4em;
+    // height: 500vh;
 
     // padding-top: 6em;
     .heroImage{
@@ -82,7 +83,7 @@
             background-color: white;
             .imgArea{
                 height: 60%;
-                background-color: red;
+                // background-color: red;
                 img{
                     width: 100%;
                     height: 100%;
