@@ -19,7 +19,7 @@
         #aboutBeFit{
             padding: 5em 6em 11em 6em;
             flex-direction: column;
-            gap: 4em;
+            gap: 2em;
             h2{
                 font-size: 5rem;
                 // background-color: red;
@@ -36,6 +36,7 @@
             }
         }
         #calculatorSection{
+            margin-top: -215px;
             .container{
                 .takeline{
                     font-size: 4rem;
