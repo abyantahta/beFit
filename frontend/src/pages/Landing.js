@@ -34,8 +34,6 @@ function Landing() {
 
   }
   const {BMI} = useSelector(state=> state.counter)
-  // console.log(BMI)
-  // console.log(data)
   return (
     <div id="home">
       <section id="landingPage">

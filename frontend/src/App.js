@@ -5,7 +5,6 @@ import Landing from './pages/Landing';
 import Food from './pages/Food';
 import FoodDetails from './pages/FoodDetails';
 import Article from './pages/Article';
-// import ArticleDetails from './pages/ArticleDetails';
 import './App.scss';
 import Header from './components/Header';
 import { useState } from 'react';

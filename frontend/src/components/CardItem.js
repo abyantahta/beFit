@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function CardItem({data}) {
-  console.log(data)
   return (
     <div className="card" key={data.id}>
       <div className="imgArea">

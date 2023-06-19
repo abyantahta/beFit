@@ -43,8 +43,7 @@ function Register() {
         confirm_password : confirmPassword
       }
       const response = await axios.post('https://capstone-dicoding-backend.up.railway.app/register', data)
-
-      console.log(response.data.message)
+      console.log(response)
     }
     catch(error){
       console.log(error)

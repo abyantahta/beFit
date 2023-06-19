@@ -21,7 +21,6 @@ function Food() {
                 console.log(error)
             }
         }
-        // console.log(query)
         fetchDataRecipe();
     },[])
     console.log(query)

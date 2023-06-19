@@ -51,8 +51,6 @@
             justify-content: space-between;
             .imgArea{
                 width: 50%;
-                // background-color: red;
-                // height: 400px;
                 img{
                     object-fit: cover;
                     width: 100%;
@@ -65,7 +63,6 @@
                     list-style-position: inside;
                     margin-top: 1em;
                     li{
-                        // line-height: 25px;
                         font-size: 1.2rem;
                         line-height: 25px;
                     }
@@ -73,7 +70,6 @@
             }
         }
         .instructions{
-            // background-color: blue;
             margin-top: 1em;
             ol{
                 line-height: 20px;
@@ -87,7 +83,6 @@
                 }
             }
             font-size: 1.2rem;
-            // background-color: red;
         }
         .subHead{
             font-size: 1.4rem;

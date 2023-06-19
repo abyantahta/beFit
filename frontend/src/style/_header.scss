@@ -12,17 +12,13 @@ header{
         justify-content: space-between;
         padding: 0 4em;
         height: 100%;
-        // background-color: red;
         .left{
-            // background-color: red;
             display: flex;
             align-items: center;
             gap: 10px;
             .img{
                 width: 50px;
                 height: 50px;
-                // background-color: rgb(176, 176, 176);
-                // border-radius: 50%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -43,7 +39,6 @@ header{
             nav{
                 display: flex;
                 align-items: center;
-                // background-color: red;
                 height: 100%;
                 gap: 40px;
             }
@@ -63,9 +58,6 @@ header{
                         border-bottom: 2px solid $brown
                     }
                 }
-                // background-color: red;
-                // padding-bottom: 10px;
-                // gap: 2px;
             }
             }
             .headerToLogin{
@@ -81,7 +73,6 @@ header{
                 }
             }
             i{
-                // background-color: red;
                 height: 100%;
                 display: flex;
                 align-items: center;

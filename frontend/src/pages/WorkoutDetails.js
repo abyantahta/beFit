@@ -17,8 +17,6 @@ function WorkoutDetails() {
     const paramsId = useParams();
     const id = parseInt(paramsId.id)
     const dataArticles = datas.workout
-    // let direction = dataArticles.direction
-    // console.log(dataArticles)
     const data = dataArticles.filter(d => d.id === id)[0]
   return (
     <div className="articleDetails">
@@ -43,7 +41,6 @@ function WorkoutDetails() {
               data.direction.map((d,index)=>(
                 <h3>Step {index+1} : {d}</h3>
               ))
-              // Object.values(dataArticles.direction[0]).forEach(val => console.log(val));
             }
         </div>
     </div>

@@ -36,7 +36,6 @@
         display: flex;
         align-items: center;
         gap: 10em;
-        // background-color: red;
         padding: 9em;
         padding-bottom: 12em;
         color: white;
@@ -76,7 +75,6 @@
                 margin-top: 40px;
                 font-size: 1.4rem;
             }
-            // background-color:green;
         }
     }
     #calculatorSection{
@@ -87,10 +85,8 @@
         margin-top: -16em;
         position: relative;
         .container{
-            // background-color: green;
             width: 80%;
             justify-content: space-between;
-            // background-color: red;
             position: absolute;
             top: 50%;
             right: 50%;
@@ -98,7 +94,6 @@
             display: flex;
             align-items: center;
             .takeline{
-                // background-color: red;
                 width: 40%;
                 font-size: 4.5rem;
                 color: white;
@@ -117,7 +112,6 @@
                     margin-bottom: 1em;
                 }
                 .inputArea{
-                    // background-color: red;
                     margin-top: 25px;
                     display: flex;
                     gap: 10px;
@@ -126,7 +120,6 @@
                         font-size: 1.5rem;
                         color: $redBrown;
                         font-weight: 600;
-                        // background-color: blue;
                     }
                     &>input{
                         font-weight: 600;
@@ -137,16 +130,13 @@
                         justify-content: center;
                         padding: 5px;
 
-                        // background-color: red;
                         font-size: 1.2rem;
                         outline: none;
                         border: 0;
                         border: 2px solid $redBrown;
-                        // margin-left: 10px;
                     }
                     .inputRadio{
                         
-                        // background-color: red;
                         width: 50%;
                         div{
                             margin-top: 5px;
@@ -154,7 +144,6 @@
                                 margin-top: 10px;
                             }
                             display: flex;
-                            // background: aqua;
                             input{
                                 width: 10%;
                             }
@@ -167,25 +156,13 @@
                             }
 
                         }
-                        input{
-
-                            // background-color: yellow;
-                            // background-color: blue;
-                        }
-                        label{
-                            // display: block;
-                            // margin-left: 10px;
-                        }
-
                     }
                 }
                 .isEmpty{
-                    // background-color: red;
                     margin-top: 5px;
                     text-align: center;
                     font-size: 1rem;
                     color: red;
-                    // margin;
                     margin-top: 15px;
                     font-weight: 600;
                 }
@@ -215,18 +192,14 @@
         background: url('../images//otherFeaturesBackground.png');
         background-size: cover;
         width: 100%;
-        // height: 90vh;
-        // opacity: .4;
         padding: 3em 7em 7em 7em;
         h2{
             opacity: 1 !important;
-            // z-index: 9999;
             color: $green;
             font-size: 4rem;
             text-align: center;
         }
         .container{
-            // background-color: red;
             width: 100%;
             height: 100%;
             display: flex;
@@ -280,7 +253,6 @@
                 padding: 0 1em;
                 width: 34%;
                 height: 100%;
-                // background-color: violet;
                 font-size: 1.4rem;
                 text-align: justify;
                 h3{
@@ -295,7 +267,6 @@
                 ul{
                     margin-top: 7px;
                     margin-left: 10px;
-                    // padding-left: 50px;
                     li{
                         line-height: 25px;
                         list-style-type: circle;
@@ -305,8 +276,6 @@
                 .refreshBMI{
                     margin-top: 2em;
                     width: fit-content;
-                    // width: 200px;
-                    // height: 50px;
                     background-color: $brown;
                     padding: .4em 2em;
                     display: flex;
@@ -320,7 +289,6 @@
                     border-radius: 13px;
                     margin-left: auto;
                     i{
-                        // background-color: red;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -335,10 +303,8 @@
             .recommendation{
                 width: 33%;
                 height: 100%;
-                // background-color: green;
                 flex-direction: column;
                 display: flex;
-                // justify-content: center;
                 align-items: center;
                 h3{
                     font-size: 1.5rem;
@@ -346,18 +312,13 @@
                 }
                 .imgContainer{
                     margin-top: 1em;
-                    // background-color: red;
-                    // display: flex;
                     gap: 10px;  
                     .img{
                         text-decoration: none;
                         color: black;
-                        // overflow: hidden;
                         .imgArea{
                             width: 250px;
                             height: 150px;
-                            // height: fit-content;
-                            // background-color: blue;
                             img{
                                 box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.582);
                                 cursor: pointer;
@@ -368,7 +329,6 @@
                                     box-shadow: 0px 0px 0px black;
                                 }
                             }
-    
                         }
                         h4{
                             margin-top: 10px;
@@ -380,40 +340,10 @@
                 }
             }
         }
-        // .imgContent{
-        //     margin-top: 3em;
-        //     display: flex;
-        //     gap: 80px;
-        //     // background-color: red;
-        //     align-items: center;
-        //     justify-content: center;
-        //     .imgContainer{
-        //         width: 50%;
-        //         // overflow: hidden;
-        //         width: 400px;
-        //         height: 230px;
-        //         border-radius: 20px;
-        //         // height: 300px;
-        //         img{
-        //             cursor: pointer;
-        //             width: 100%;
-        //             box-shadow: 0 5px 5px black;
-        //             &:hover{
-        //                 box-shadow: 0 0 0 black;
-        //             }
-        //         }
-        //         h3{
-        //             text-align: center;
-        //             font-size: 3rem;
-        //             margin-top: .3em;
-        //         }
-        //     }
-        // }
     }
     #aboutUs{
         padding: 6em;
         width: 100%;
-        // height: 100vh;
         background-color: $redBrown;
         h2{
             font-size: 4rem;
@@ -425,10 +355,7 @@
             display: flex;
             justify-content: center;
             gap: 5em;
-            // background-color: yellow;
-            .item{
-                // background-color: green;
-            }
+
             .imgArea{
                 width: 250px;
                 height: 250px;

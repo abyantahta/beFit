@@ -34,7 +34,6 @@ function Login() {
   }
 
   const {title,price} = useSelector(state => state.counter)
-  console.log(title,price,'wakwaw')
   return (
     <div id="login">
       <div className="loginContainer">

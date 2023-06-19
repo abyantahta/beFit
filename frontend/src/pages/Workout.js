@@ -3,7 +3,6 @@ import CardList from '../components/CardList'
 import datas from '../data/workout-db.json'
 
 function Workout() {
-  // console.log(datas)
     const dataWorkout = datas.workout
   return (
     <div id="workout">

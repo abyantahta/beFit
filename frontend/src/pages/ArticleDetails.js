@@ -18,9 +18,6 @@ function ArticleDetails() {
     const id = parseInt(paramsId.id)
     const dataArticles = datas.articles
     const data = dataArticles.filter(d => d.id === id)[0]
-    // let nextId = (id % dataArticles.length)+1;
-    // let prevId = ((id + dataArticles.length)-1);
-    console.log(data)
   return (
     <div className="articleDetails">
         <div className="imgArea">
